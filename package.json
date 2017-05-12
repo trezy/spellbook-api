@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/DnD-Bosses/spellbook-api#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "koa": "^2.2.0",
     "koa-mongoose": "^2.0.0"
   },
