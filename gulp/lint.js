@@ -1,12 +1,19 @@
 'use strict';
 
-const assets = require('../config/assets');
+const _ = require('lodash');
+const assetsConfig = require('../config/assets');
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 
 // ESLint JS linting task
 gulp.task('lint', function() {
-  return gulp.src(assets.allJS)
+  var assets = _.union(
+    assetsConfig.allJS,
+    assetsConfig.gulp,
+    assetsConfig.tests
+  );
+
+  return gulp.src(assets)
     .pipe(eslint())
     .pipe(eslint.format());
 });
