@@ -24,7 +24,7 @@
   "homepage": "https://github.com/DnD-Bosses/spellbook-api#readme",
   "dependencies": {
     "koa": "^2.2.0",
-    "koa-mongo": "^0.7.0"
+    "koa-mongoose": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
