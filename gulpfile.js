@@ -19,3 +19,8 @@ fs.readdirSync('./gulp')
   .map(function(file) {
     return require('./gulp/' + file);
   });
+
+// Run the project in development mode
+gulp.task('default', function(done) {
+  runSequence('lint', 'watch', done);
+});
