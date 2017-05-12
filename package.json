@@ -1,0 +1,37 @@
+{
+  "name": "spellbook-api",
+  "version": "0.0.1",
+  "description": "An api for spellbook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DnD-Bosses/spellbook-api.git"
+  },
+  "keywords": [
+    "dnd",
+    "spellbook",
+    "api"
+  ],
+  "author": "Clinton Otte-Ford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DnD-Bosses/spellbook-api/issues"
+  },
+  "homepage": "https://github.com/DnD-Bosses/spellbook-api#readme",
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-mongo": "^0.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^4.3.1"
+  }
+}
