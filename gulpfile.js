@@ -22,5 +22,5 @@ fs.readdirSync('./gulp')
 
 // Run the project in development mode
 gulp.task('default', function(done) {
-  runSequence('lint', 'watch', done);
+  runSequence('lint', 'nodemon', done);
 });
