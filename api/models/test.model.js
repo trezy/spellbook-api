@@ -10,9 +10,20 @@ const Schema = mongoose.Schema;
  * Client Schema
  */
 var TestSchema = new Schema({
-  test: {
+  boolean: {
     type: Boolean,
     default: false
+  },
+  number: Number,
+  string: {
+    type: String,
+    required: 'Must be set!'
+  },
+  date: {
+    type: Date
+  },
+  array: {
+    type: [String]
   }
 });
 
