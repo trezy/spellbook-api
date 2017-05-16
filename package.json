@@ -11,19 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DnD-Bosses/spellbook-api.git"
+    "url": "git+https://github.com/madhackers/spellbook-api.git"
   },
   "keywords": [
     "dnd",
     "spellbook",
     "api"
   ],
-  "author": "Clinton Otte-Ford",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DnD-Bosses/spellbook-api/issues"
+    "url": "https://github.com/madhackers/spellbook-api/issues"
   },
-  "homepage": "https://github.com/DnD-Bosses/spellbook-api#readme",
+  "homepage": "https://github.com/madhackers/spellbook-api#readme",
   "dependencies": {
     "chalk": "^1.1.3",
     "dotenv": "^4.0.0",
