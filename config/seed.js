@@ -3,7 +3,7 @@
 const _ = require('lodash');
 const path = require('path');
 const config = require('../config');
-const mongoose = require('mongoose');
+const mongoose = require('../config/mongoose.js');
 const chalk = require('chalk');
 const glob = require('glob');
 
@@ -11,8 +11,10 @@ const glob = require('glob');
 var seedOptions = {};
 
 module.exports.start = function start(done) {
+  mongoose.loadModels();
+
   // Globbing model files
-  glob('data/*.js', (err, files) => {
+  glob('data/*.seed.js', (err, files) => {
     if (err) {
       return console.error(chalk.red(err));
     }
@@ -26,7 +28,7 @@ module.exports.start = function start(done) {
 
     files.forEach(seedPath => {
       require(path.resolve(seedPath)).seed(function() {
-        seeded + 1;
+        seeded += 1;
         if (seeded === files.length) {
           done();
         }
