@@ -8,6 +8,7 @@ const gulp = require('gulp');
 const runSequence = require('run-sequence');
 
 // Drops the MongoDB database, used in e2e testing
+// TODO: Needs to be setup to seed, currently a placeholder.
 gulp.task('seedDB', function(done) {
   // Use mongoose configuration
 
