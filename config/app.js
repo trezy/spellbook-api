@@ -8,6 +8,7 @@ const mongoose = require('./mongoose');
 const router = require('./router');
 // const Router = require('koa-router');
 const Koa = require('koa');
+const bodyParser = require('koa-bodyparser');
 const chalk = require('chalk');
 
 // Initialize Models
@@ -18,6 +19,7 @@ module.exports.init = function init(callback) {
 
     // Initialize express
     let app = new Koa(db);
+
     if (callback) callback(app, db, config);
   });
 };
@@ -26,6 +28,8 @@ module.exports.start = function start(callback) {
   let _this = this;
 
   _this.init(function(app, db, config) {
+
+    app.use(bodyParser());
 
     router.load(app, db);
 

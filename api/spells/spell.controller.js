@@ -13,7 +13,9 @@ exports.list = function(ctx, next) {
 };
 
 exports.create = function(ctx, next) {
-  return Spell.findById(ctx.params.id, ctx.request.body, function(err, spell) {
+  let spell = new Spell(ctx.request.body);
+
+  return spell.save(function(err) {
     if (err) {
       return console.error(err);
     }
