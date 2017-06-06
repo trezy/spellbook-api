@@ -29,6 +29,7 @@
     "fs-extra": "^3.0.1",
     "glob": "^7.1.1",
     "koa": "^2.2.0",
+    "koa-router": "^7.2.0",
     "mongoose": "^4.9.8"
   },
   "devDependencies": {

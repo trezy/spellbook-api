@@ -6,6 +6,7 @@
 const config = require('./');
 const mongoose = require('./mongoose');
 const router = require('./router');
+// const Router = require('koa-router');
 const Koa = require('koa');
 const chalk = require('chalk');
 
@@ -26,7 +27,7 @@ module.exports.start = function start(callback) {
 
   _this.init(function(app, db, config) {
 
-    router.load(app, db, config);
+    router.load(app, db);
 
     // Start the app
 

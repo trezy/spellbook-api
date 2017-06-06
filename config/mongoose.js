@@ -13,7 +13,7 @@ const config = require('../config/db');
 module.exports.loadModels = function(callback) {
 
   // Globbing model files
-  glob('api/models/*.js', (err, files) => {
+  glob('api/**/*.model.js', (err, files) => {
     if (err) {
       return console.error(chalk.red(err));
     }
