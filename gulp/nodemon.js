@@ -1,6 +1,6 @@
 'use strict';
 
-const assets = require('../config/assets');
+const config = require('../config/env/default');
 const gulp = require('gulp');
 const nodemon = require('gulp-nodemon');
 
@@ -11,6 +11,6 @@ gulp.task('nodemon', function() {
     nodeArgs: ['--debug'],
     ext: 'js',
     verbose: true,
-    watch: assets.allJS
+    watch: config.assets.allJS
   });
 });

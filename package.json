@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "An api for spellbook",
   "main": "index.js",
+  "engines": {
+    "node": "^7.x.x"
+  },
   "scripts": {
     "start": "gulp",
     "start:prod": "node index.js",

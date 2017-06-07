@@ -1,9 +1,9 @@
 'use strict';
 
-const assets = require('../config/assets');
+const config = require('../config/env/default');
 const gulp = require('gulp');
 const mocha = require('gulp-mocha');
-const mongoose = require('../config/mongoose');
+const mongoose = require('../config/lib/mongoose');
 const runSequence = require('run-sequence');
 
 // Local settings
@@ -12,7 +12,7 @@ var changedTestFiles = [];
 // Mocha tests task
 gulp.task('mocha', function(done) {
   // Open mongoose connections
-  var testSuites = assets.tests;
+  var testSuites = config.assets.tests;
   var error;
 
   mongoose.loadModels();

@@ -1,6 +1,5 @@
 'use strict';
 
-const config = require('../config/db');
 const chalk = require('chalk');
 const mongoose = require('../config/lib/mongoose');
 const seed = require('../config/lib/seed');
