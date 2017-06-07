@@ -7,7 +7,7 @@ const glob = require('glob');
 const path = require('path');
 const chalk = require('chalk');
 const mongoose = require('mongoose');
-const config = require('../db');
+const config = require('../env/default');
 
 // Load the mongoose models
 module.exports.loadModels = function(callback) {

@@ -2,8 +2,8 @@
 
 const _ = require('lodash');
 const path = require('path');
-const config = require('../config');
-const mongoose = require('../config/mongoose.js');
+const config = require('../env/default');
+const mongoose = require('../mongoose');
 const chalk = require('chalk');
 const glob = require('glob');
 

@@ -15,13 +15,8 @@ exports.create = async function(ctx, next) {
 };
 
 exports.read = async function(ctx, next) {
-  // try {
-    let spell = await Spell.findById(ctx.params.id);
-    ctx.body = spell;
-  // } catch (err) {
-  //   console.error(err);
-  //   ctx.body = err.message;
-  // }
+  let spell = await Spell.findById(ctx.params.id);
+  ctx.body = spell;
 };
 
 exports.update = async function(ctx, next) {

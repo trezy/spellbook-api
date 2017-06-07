@@ -7,7 +7,6 @@ const glob = require('glob');
 const path = require('path');
 const chalk = require('chalk');
 const Router = require('koa-router');
-const config = require('../db');
 
 // Load the mongoose models
 module.exports.load = function(app, db) {
