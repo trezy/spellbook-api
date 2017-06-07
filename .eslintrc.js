@@ -2,10 +2,19 @@ module.exports = {
   extends: [
     'airbnb/legacy'
   ],
+  parserOptions: {
+    ecmaVersion: 8,
+    ecmaFeatures: {
+      globalReturn: true
+    }
+  },
   rules: {
     camelcase: 0,
     'comma-dangle': [2, 'never'],
-    'comma-spacing': [2, { before: false, after: true }],
+    'comma-spacing': [2, {
+      before: false,
+      after: true
+    }],
     'consistent-return': 0,
     curly: 0,
     'default-case': 0,
@@ -13,9 +22,17 @@ module.exports = {
     'func-names': 0,
     'global-require': 0,
     'guard-for-in': 2,
-    indent: [2, 2, { SwitchCase: 1 }],
-    'key-spacing': [2, { beforeColon: false, afterColon: true }],
-    'keyword-spacing': [2, { before: true, after: true }],
+    indent: [2, 2, {
+      SwitchCase: 1
+    }],
+    'key-spacing': [2, {
+      beforeColon: false,
+      afterColon: true
+    }],
+    'keyword-spacing': [2, {
+      before: true,
+      after: true
+    }],
     'max-len': 0,
     'new-cap': 2,
     'no-bitwise': 0,
