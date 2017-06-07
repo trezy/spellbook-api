@@ -3,49 +3,33 @@
 const mongoose = require('mongoose');
 const Spell = mongoose.model('Spell');
 
-exports.list = function(ctx, next) {
-  return Spell.find(ctx.query, function(err, spells) {
-    if (err) {
-      return console.error(err);
-    }
-    ctx.body = spells;
-  });
+exports.list = async function(ctx, next) {
+  let spells = await Spell.find(ctx.query);
+  ctx.body = spells;
 };
 
-exports.create = function(ctx, next) {
+exports.create = async function(ctx, next) {
   let spell = new Spell(ctx.request.body);
-
-  return spell.save(function(err) {
-    if (err) {
-      return console.error(err);
-    }
-    ctx.body = spell;
-  });
+  await spell.save();
+  ctx.body = spell;
 };
 
-exports.read = function(ctx, next) {
-  return Spell.findById(ctx.params.id, function(err, spell) {
-    if (err) {
-      return console.error(err);
-    }
+exports.read = async function(ctx, next) {
+  // try {
+    let spell = await Spell.findById(ctx.params.id);
     ctx.body = spell;
-  });
+  // } catch (err) {
+  //   console.error(err);
+  //   ctx.body = err.message;
+  // }
 };
 
-exports.update = function(ctx, next) {
-  return Spell.findByIdAndUpdate(ctx.params.id, ctx.body, function(err, spell) {
-    if (err) {
-      return console.error(err);
-    }
-    ctx.body = spell;
-  });
+exports.update = async function(ctx, next) {
+  let spell = Spell.findByIdAndUpdate(ctx.params.id, ctx.request.body);
+  ctx.body = spell;
 };
 
-exports.delete = function(ctx, next) {
-  return Spell.findByIdAndRemove(ctx.params.id, function(err, spell) {
-    if (err) {
-      return console.error(err);
-    }
-    ctx.body = 'Spell deleted!';
-  });
+exports.delete = async function(ctx, next) {
+  let spell = Spell.findByIdAndRemove(ctx.params.id);
+  ctx.body = 'Spell deleted!';
 };
