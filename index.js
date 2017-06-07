@@ -3,5 +3,5 @@
 /**
  * Module dependencies.
  */
-const app = require('./config/app');
+const app = require('./config');
 const server = app.start();
