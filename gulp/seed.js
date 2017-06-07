@@ -2,8 +2,8 @@
 
 const config = require('../config/db');
 const chalk = require('chalk');
-const mongoose = require('../config/mongoose');
-const seed = require('../config/seed');
+const mongoose = require('../config/lib/mongoose');
+const seed = require('../config/lib/seed');
 const gulp = require('gulp');
 const runSequence = require('run-sequence');
 

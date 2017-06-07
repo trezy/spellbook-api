@@ -4,9 +4,8 @@
  * Module dependencies.
  */
 const config = require('./');
-const mongoose = require('./mongoose');
-const router = require('./router');
-// const Router = require('koa-router');
+const mongoose = require('./lib/mongoose');
+const router = require('./lib/router');
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 const chalk = require('chalk');

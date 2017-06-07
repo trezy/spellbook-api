@@ -7,15 +7,15 @@ const glob = require('glob');
 const path = require('path');
 const chalk = require('chalk');
 const Router = require('koa-router');
-const config = require('../config/db');
+const config = require('../db');
 
 // Load the mongoose models
 module.exports.load = function(app, db) {
   var router = new Router();
 
   router.get('/', function(ctx, next) {
-    console.log(ctx.query);
-    ctx.body = 'Endpoint return';
+    ctx.status = 404;
+    ctx.body = 'Endpoint not found';
   });
 
   // Globbing model files
