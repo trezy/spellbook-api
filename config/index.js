@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-const config = require('./');
+const config = require('./env/default');
 const mongoose = require('./lib/mongoose');
 const router = require('./lib/router');
 const errors = require('./lib/errors');
