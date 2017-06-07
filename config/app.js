@@ -6,6 +6,7 @@
 const config = require('./');
 const mongoose = require('./lib/mongoose');
 const router = require('./lib/router');
+const errors = require('./lib/errors');
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 const chalk = require('chalk');
@@ -29,7 +30,7 @@ module.exports.start = function start(callback) {
   _this.init(function(app, db, config) {
 
     app.use(bodyParser());
-
+    errors.init(app);
     router.load(app, db);
 
     // Start the app
